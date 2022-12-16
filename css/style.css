@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Fjalla One|Muli');
 
 @media(prefers-reduced-motion) {
     .hidden {
@@ -6,26 +6,52 @@
     }
 }
 
-body {
+
+
+html,body {
+    scroll-behavior: smooth;
     color: #ffffff;
     font-family: "Poppins", serif;
     background: linear-gradient(120deg,#2980b9, #8e44ad);
     padding: 0;
     margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+.modal-content{
+    background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
+
+
+.brand-logo{
+    font-family: "Fjalla One",sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+  }
 
 .sidenav {
     text-shadow: 4px 4px 4px #aaa;
 }
 
-
+h2{
+    font-family: "Muli", sans-serif;
+}
+footer{
+    font-family: "Poppins", serif;
+    background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
 
 
 p{
     text-align: center;
 }
 
-section {
+
+.container {
     display: grid;
     place-items: center;
     align-content: center;
@@ -63,7 +89,12 @@ section {
 
 iframe{
     width: 100%;
-    height: 500px;
-   
+    height: 500px;  
+}
 
+
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
 }

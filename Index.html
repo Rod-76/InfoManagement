@@ -14,143 +14,194 @@
     <title>Info Management</title>
 </head>
 <body>
-  <section class="col s12 m6 center-align">
-    <h2 class="display-4">Hi there!</h2>
-    <h5>We're here to help and listen...</h5>
-    <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">book_online</i>Book Now</a>
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content blue-grey darken-4">
-            <div class="row">
-                <h4>Kindly fill up this form.</h4>
-                <h5>Patient Information</h5>
-                <p>Patient data is strictly confidential.</p>
-                <form class="col s12">
+    <header>
+        <nav id="navbar" class="col s12 m6 blue darken-3">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="left sidenav-trigger show-on-large"><i class="material-icons">account_circle</i></a>
+              <a href="#!" class="brand-logo center">Talk Dirty To Me!</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="waves-effect" href="#contact"><i class="material-icons left">contact_support</i>Contact Us</a></li>
+                <li><a class="waves-effect" href="#map"><i class="material-icons left">explore</i>Locate Us</a></li>
+              </ul>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a class="waves-effect" href="#who"><i class="material-icons left">cloud</i>Who We Are</a></li>
+                <li><a class="waves-effect" href="#our"><i class="material-icons left">info</i>Our Therapy</a></li>
+              </ul>        
+              <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background responsive-img">
+                    <img src="/images/sample.jpg">
+                  </div>
+                  <a href="#user"><img class="circle responsive-img" src="https://avatars.dicebear.com/api/bottts/rod.svg"></a>
+                  <a href="#name"><span class="white-text name">Rod Ian Baguio</span></a>
+                </div></li>
+                <li><a href="#!">Second Link</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+              </ul>
+              
+            </div>
+        </nav>                 
+    </header>  
+    <main>
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="waves-effect waves-light btn-floating btn-large blue pulse">
+            <i class="large material-icons">arrow_upward</i></button>
+        <section>
+            <div class="container">               
+                <h2 class="display-4">Hi there!</h2>
+                <h5>We're here to help and listen...</h5>
+                <a class="waves-effect waves-light btn modal-trigger z-depth-3 pulse" href="#modal1"><i class="material-icons left">book_online</i>Book Now</a> 
+            </div>
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content blue darken-3">
                     <div class="row">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="first_name" type="text" class="validate" required>
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input id="last_name" type="text" class="validate" required>
-                            <label for="last_name">Last Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">phone</i>
-                            <input id="phone" type="tel" class="validate" required>
-                            <label for="phone">Telephone</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">email</i>
-                            <input id="email" type="email" class="validate" required>
-                            <label for="email">Email</label>
-                            <span class="helper-text" data-error="wrong" data-success="right">*Input proper Email*</span>
-                        </div>
-                        <div class="input-field col s6 file-field input-field">                           
-                            <div class="btn">
-                                <span><i class="material-icons right">file_upload</i>File</span>
-                                <input type="file" multiple>
+                        <h4>Kindly fill up this form.</h4>
+                        <h5>Patient Information</h5>
+                        <p>Patient data is strictly confidential.</p>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="first_name" type="text" class="validate" required>
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="last_name" type="text" class="validate" required>
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="phone" type="tel" class="validate" required>
+                                    <label for="phone">Telephone</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="email" type="email" class="validate" required>
+                                    <label for="email">Email</label>
+                                    <span class="helper-text" data-error="wrong" data-success="right">*Input proper Email*</span>
+                                </div>
+                                <div class="input-field col s6 file-field input-field">                           
+                                    <div class="btn">
+                                        <span><i class="material-icons right">file_upload</i>File</span>
+                                        <input type="file" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                    </div>                            
+                                </div>                               
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
-                            </div>                            
-                        </div>
-                        
+                        </form>
                     </div>
-                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="action" class="right btn waves-effect waves-light">Submit<i class="material-icons right">send</i></button>
+                    <button class="left modal-close btn waves-effect waves-light">Cancel<i class="material-icons right">cancel_schedule_send</i></button>
+                </div>
             </div>
+        </div>       
+        <section class="hidden">
+            <div id="who" class="center">
+                <h2>Who We Are</h2>
+            </div>
+                <div class="container">
+                    <div class="hidden">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <h4>Our Medical Practice</h4>
+                                <p class="hidden">We are licensed Psychiatrists with combined 30 years of medical experience, providing online consultation. Our specialization includes anxiety disorder, depression, insomnia, mood disorder, and post traumatic stress disorder in adults and children.</p>
+                            </div>
+                            <div class="col s12 m6 center">
+                                <h4>Our Treatment Focus</h4>
+                                <p class="hidden">Our focus is to help individuals heal, energize, and become aware of their inner strengths. We achieve this by providing a neutral safe space, listening to your concerns, and customizing a treatment plan.</p>
+                            </div>
+                            <div class="col s12 m6 center">
+                                <h4>Our Patient Commitment</h4>
+                                <p class="hidden">We promise to be there for you every step of your journey. Our goal is alleviate your unwanted symptoms, to help you grow from your struggles, heal from your pain, and move forward to where you want to be in your life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="hidden">
+            <div id="our" class="center">
+                <h2>Our Therapy</h2>
+            </div>
+                <div class="container">
+                    <div class="hidden">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <h4>Depression, Mood, Anxiety, and Panic Attacks</h4>
+                                <p class="hidden">Depression, mood instability, fear, anxiety, insomnia, and panic are some of the most common and uncomfortable emotions that we can experience at some point in our lives. Through psychotherapy, counseling, and treatment, we are able to help you recover motivation, perspective, and joy that you once had in your life.</p>
+                            </div>
+                            <div class="col s12 m6 center">
+                                <h4>Trauma & PTSD</h4>
+                                <p class="hidden">
+                                    Many individuals can experience symptoms associated with painful and traumatic circumstances. Anxiety, fear, and hopelessness are a few emotions that can linger post traumatic events. We can help you overcome these symptoms and guide you through the process of grief and healing.
+                                </p>
+                            </div>
+                            <div class="col s12 m6 center">
+                                <p class="hidden">Note: This is NOT for any emergencies. For emergency cases, please seek consult at the nearest Hospital Emergency Room.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hidden">
+            <div id="contact" class="center">
+                <h2>Contact Us</h2>
+            </div>
+            <div>
+                <div class="container">
+                    <div class="hidden">
+                        <div class="row">
+                            <div class="col s12 center">
+                                <h5>We're Here for You</h5>
+                                <p class="hidden">Please contact us with questions.</p>
+                            </div>
+                            <div class="col s12 center">
+                                <h5>Talk to Dr. Lee (Online)</h5>
+                                <p class="hidden">Manila Doctors Hospital, United Nations Avenue, Ermita, Manila, Metro Manila, Philippines</p>
+                                <p class="hidden">Email: Admin@talktodrlee.com</p>
+                            </div>
+                            <div class="col s12 center hidden">
+                                <h5>Hours</h5>
+                                  <!-- Dropdown Trigger -->
+                                  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+                                  <!-- Dropdown Structure -->
+                                  <ul id='dropdown1' class='dropdown-content'>
+                                    <li><a href="#!">one</a></li>
+                                    <li><a href="#!">two</a></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li><a href="#!">three</a></li>
+                                    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                                    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                                  </ul>    
+                            </div>
+                        </div>
+                </div>             
+            </div>
+        </section>
+        
+        
+    </main>
+    <footer class="page-footer">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d901.2418077286297!2d123.19349222916837!3d13.62050459940203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a18cc8578709e9%3A0x22c8403557204e15!2sDr.%20Edessa%20Parde-Laguidao%20Psychiatrist!5e1!3m2!1sen!2sph!4v1671007648886!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
-        <div class="modal-footer">
-            <button type="submit" name="action" class="right btn waves-effect waves-light">Submit<i class="material-icons right">send</i></button>
-            <button class="left modal-close btn waves-effect waves-light">Cancel<i class="material-icons right">cancel_schedule_send</i></button>
-        </div>
-    </div>
-</section>
-
-<section class="hidden">
-    <h2>Who We Are</h2>
-</section>
-    <div class="container">
-        <section class="hidden">
-            <div class="row">
-                <div class="col s12 center">
-                    <h4>Our Medical Practice</h4>
-                    <p class="hidden">We are licensed Psychiatrists with combined 30 years of medical experience, providing online consultation. Our specialization includes anxiety disorder, depression, insomnia, mood disorder, and post traumatic stress disorder in adults and children.</p>
-                </div>
-                <div class="col s12 m6 center">
-                    <h4>Our Treatment Focus</h4>
-                    <p class="hidden">Our focus is to help individuals heal, energize, and become aware of their inner strengths. We achieve this by providing a neutral safe space, listening to your concerns, and customizing a treatment plan.</p>
-                </div>
-                <div class="col s12 m6 center">
-                    <h4>Our Patient Commitment</h4>
-                    <p class="hidden">We promise to be there for you every step of your journey. Our goal is alleviate your unwanted symptoms, to help you grow from your struggles, heal from your pain, and move forward to where you want to be in your life.</p>
-                </div>
-            </div>
+        <section class="container footer-copyright">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </section>
-    </div>
-</div>
-<div>
-    <div class="container">
-        <section class="hidden">
-            <div class="row">
-                <div class="col s12 center">
-                    <h4>Depression, Mood, Anxiety, and Panic Attacks</h4>
-                    <p class="hidden">Depression, mood instability, fear, anxiety, insomnia, and panic are some of the most common and uncomfortable emotions that we can experience at some point in our lives. Through psychotherapy, counseling, and treatment, we are able to help you recover motivation, perspective, and joy that you once had in your life.</p>
-                </div>
-                <div class="col s12 m6 center">
-                    <h4>Trauma & PTSD</h4>
-                    <p class="hidden">
-                        Many individuals can experience symptoms associated with painful and traumatic circumstances. Anxiety, fear, and hopelessness are a few emotions that can linger post traumatic events. We can help you overcome these symptoms and guide you through the process of grief and healing.
-                    </p>
-                </div>
-                <div class="col s12 m6 center">
-                    <p class="hidden">Note: This is NOT for any emergencies. For emergency cases, please seek consult at the nearest Hospital Emergency Room.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<div>
-    <div class="container">
-        <section class="hidden">
-            <div class="row">
-                <div class="col s12 center">
-                    <h4>Our Medical Practice</h4>
-                    <p class="hidden">We are licensed Psychiatrists with combined 30 years of medical experience, providing online consultation. Our specialization includes anxiety disorder, depression, insomnia, mood disorder, and post traumatic stress disorder in adults and children.</p>
-                </div>
-                <div class="col s12 m6 center">
-                    <h4>Our Treatment Focus</h4>
-                    <p class="hidden">Our focus is to help individuals heal, energize, and become aware of their inner strengths. We achieve this by providing a neutral safe space, listening to your concerns, and customizing a treatment plan.</p>
-                </div>
-                <div class="col s12 m6 center">
-                    <h4>Our Patient Commitment</h4>
-                    <p class="hidden">We promise to be there for you every step of your journey. Our goal is alleviate your unwanted symptoms, to help you grow from your struggles, heal from your pain, and move forward to where you want to be in your life.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-
-<div class="col s12 m6 map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d901.2418077286297!2d123.19349222916837!3d13.62050459940203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a18cc8578709e9%3A0x22c8403557204e15!2sDr.%20Edessa%20Parde-Laguidao%20Psychiatrist!5e1!3m2!1sen!2sph!4v1671007648886!5m2!1sen!2sph"
-            width="600" height="450" style="border:0;" allowfullscreen=""
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+    </footer>
   
     
 </body>
-<footer class="page-footer blue-grey darken-4">
-  <div class="footer-copyright">
-      <div class="container ">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-  </div>
-</footer>
-
     <!--Jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Compiled and minified JavaScript -->

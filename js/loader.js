@@ -4,6 +4,9 @@ $(document).ready(function () {
   $('.datepicker').datepicker();
   $('.sidenav').sidenav();
   $('.dropdown-trigger').dropdown();
+  $('.fixed-action-btn').floatingActionButton();
+  $('.tooltipped').tooltip();
+  $('.tap-target').tapTarget();
 
 })
 
@@ -21,13 +24,22 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-$(document).ready(function () {
-  $('.pushpin-demo-nav').each(function () {
-      var $this = $(this);
-      var $target = $('#' + $(this).attr('data-target'));
-      $this.pushpin({
-          top: $target.offset().top,
-          bottom: $target.offset().top + $target.outerHeight() - $this.height()
-      });
-  });
-});
+
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
